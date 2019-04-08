@@ -6,7 +6,7 @@ app = Flask(__name__)
 with open("secret.txt") as f:
     app.secret_key = max(f.readlines(), key=len).strip()
 
-@app.route('/', methods=['GET'])
+@app.route('/', methods=['GET', 'POST'])
 def index():
     msg = "Hello world!"
     if request.method == "POST":
