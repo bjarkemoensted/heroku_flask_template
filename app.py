@@ -3,8 +3,7 @@ from flask import Flask, render_template, url_for, request, session, redirect
 
 app = Flask(__name__)
 
-with open("secret.txt") as f:
-    app.secret_key = max(f.readlines(), key=len).strip()
+app.secret_key = "hunter2"
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
