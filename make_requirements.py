@@ -18,7 +18,7 @@ _here = os.path.dirname(os.path.realpath(__file__))
 os.chdir(_here)
 
 # General requirements (not speficied in any python file)
-general = set(["tensorflow"])
+general = set(["gunicorn"])
 
 def make_temp_filename():
     alf = string.ascii_uppercase + string.ascii_lowercase + string.digits
